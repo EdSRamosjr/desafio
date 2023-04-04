@@ -3,17 +3,21 @@ root" é onde fica as variaveis. sempre por os dois traços para chamar a variav
 para chamar todos os elementos usamos "*"
 box-shadow é sombra!
 bottom para baixo
-
 */
+
 @charset "UTF-8";
+
 @font-face {
     font-family: 'idroid';
-    src: url(...\coisas\fontes\idroid.otf);
+    src: url(../coisas/fontes/idroid.otf) format('opentype');
+    font-weight: normal;
 }
+
 *{
     margin: 0px;
     padding: 0px;
 }
+
 :root{
     --cor1:#c5ebd6;
     --cor2:#83e1ad;
@@ -31,6 +35,8 @@ body{
     background-color: var(--cor1);
     
 }
+
+
 
 header{
     background-image: linear-gradient(to bottom, var(--cor2),var(--cor4), var(--cor6));
@@ -59,12 +65,16 @@ header > p {
     padding-right: 10px;
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.63);
 }
+
+
+
 nav{
     background-color: black;
     padding: 10px;
     text-shadow: 0px 7px 9px rgba(0, 0, 0, 0.63);
     
 }
+
 nav > a{
     display: inline-block;
     background-color: black;
@@ -73,6 +83,7 @@ nav > a{
     padding: 10px 20px;    
     text-decoration: none;
 }
+
 nav > a:hover{
     background-color: var(--cor6);
     text-decoration: underline;
@@ -82,6 +93,7 @@ nav > a:hover{
     transition-duration: .3s;
 
 }
+
 p > a:hover{
     text-decoration: underline;
     color: var(--cor2);
@@ -98,6 +110,7 @@ main{
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.568); 
 }
+
 main p{
     margin: 15px 0px;
     text-align: justify;
@@ -105,66 +118,78 @@ main p{
     line-height: 1.5em;
     font-size: 1em;
 }
+
 main img{
     width: 100%;
 }
+
 main strong{
     color: var(--cor4);
     font-weight: bold;
     padding: 2px 6px;
 }
+
 h2{
+    font-family: var(--fonte-android) ;
     color: var(--cor4);
     font-size: 1.3em;
     background-image: linear-gradient(to right, var(--cor2),transparent);
     text-indent: 12px;    
 }
-footer{
-    background-color: var(--cor6);
-    color: white;
-    text-align: center;
-    padding: 20px;
-    font-size: 15px;
-}
-footer > p {
-    color: white;
-    text-decoration: none;
-}
+
+
+
+
+
 .linktxt:hover{
     text-decoration: underline;
     color: var(--cor2);
 }
+
 .linktxt{
     background-color: var(--cor4);
     text-decoration: none;
     color: white;
     margin: 10px;
 }
+
 .linkfooter{
     color: white;
     text-decoration: none; 
 }
+
 /*::after, é para por um objeto depois do objeto raiz!*/
 .linktxt::after{
     content: '\00A0\1F517';
 }
+
 .linkfooter::after{
     content: '\00A0\1F517';
 }
+
 .image{
     max-width: 350px;
     display: block;
     margin: auto;
 }
+
+
 main img{
     width: 100%;
 }
+
+
+
 aside{
     background-color: var(--cor2);
     padding: 10px;
     border-radius: 10px;
     box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.356);
 }
+
+
+
+
 /*columns é para de finir quantas colunas!
 list-style-type, é para por emoji! sempre por \ depois o codigo!!!
 list-style-position, foi para traser as bolinhas pra dentro da div! colocando o inside ele entra para a div!
@@ -174,6 +199,10 @@ aside > ul{
     list-style-position: inside;
     columns: 2;    
 }
+
+
+
+
 /*margin com valores negativo é para aumentar a caixa pra fora!*/
 aside > h3{
     background-color: var(--cor6);
@@ -182,6 +211,10 @@ aside > h3{
     margin: -10px -10px 0px -10px;
     border-radius: 10px 10px 0px 0px;
 }
+
+
+
+
 /*
 arrumando o videos externo!
 tem que por o position "relative" e depois o "absoluto".
@@ -199,5 +232,24 @@ div#video{
     top: 5%;
     left: 5%;
     width: 90%;
-    height: 0%;
+    height: 90%;
+}
+footer{
+    background-color: var(--cor6);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 15px;
+}
+
+footer > p {
+    color: white;
+    text-decoration: none;
+}
+footer a{
+    text-decoration: none;
+    color: white;
+}
+footer a::after{
+    content: '\00A0\1F517';
 }
